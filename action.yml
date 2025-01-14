@@ -1,4 +1,4 @@
-name: 'run-notebook'
+name: 'dseas-nb'
 description: 'Run notebook'
 author: 'yaananth'
 inputs:
