@@ -1,0 +1,22 @@
+name: 'run-notebook'
+description: 'Run notebook'
+author: 'yaananth'
+inputs:
+  notebook:
+    description: 'Path to notebook with extension that should be executed'
+    default: ''
+  params:
+    description: 'Path to parameters file with extension, contents should be json'
+    default: '{}'
+  isReport:
+    description: 'If True, will hide inputs in notebook'
+    default: False
+  poll:
+    description: 'If True, this will pool output every 15 seconds and displays, this is useful in cases where there is long running cells and user wants to see output after going to the page, since github actions does not show streaming from the beginning, this is a hack to get around it'
+    default: False
+branding:
+  icon: 'book'
+  color: 'orange'
+runs:
+  using: 'node20'
+  main: 'lib/main.js'
